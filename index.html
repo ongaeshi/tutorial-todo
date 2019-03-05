@@ -17,6 +17,16 @@
         </tr>
       </thead>
       <tbody>
+        <tr v-for="item in todos" v-bind:key="item.id">
+          <th>{{ item.id }}</th> <!-- td? -->
+          <td>{{ item.comment }}</td>
+          <td class="state">
+            <button>{{ item.state }}</button>
+          </td>
+          <td class="button">
+            <button>削除</button>
+          </td>
+        </tr>
       </tbody>
     </table>
     <!-- 絞り込みラジオボタン -->
