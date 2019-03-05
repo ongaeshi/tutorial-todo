@@ -22,6 +22,22 @@ const app = new Vue({
     todos: []
   },
   methods: {
-    // 使用するメソッド
+    doAdd: function(event, value) {
+      var comment = this.$refs.comment
+      // There is no input
+      if (!comment.value.length) {
+        return
+      }
+      // Add todo
+      this.todos.push({
+        id: todoStorage.uid++,
+        comment: comment.value,
+        state: 0
+      })
+      // Empty form
+      comment.value = ''
+
+
+    }
   }
 })
