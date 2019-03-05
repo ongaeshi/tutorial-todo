@@ -47,5 +47,8 @@ const app = new Vue({
       },
       deep: true
     }
+  },
+  created() {
+    this.todos = todoStorage.fetch()
   }
 })
