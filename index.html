@@ -13,6 +13,8 @@
         v-bind:value="label.value">{{ label.label }}
     </label>
 
+    ({{ computedTodos.length }} 件を表示)
+
     <table>
       <thead>
         <tr>
@@ -23,7 +25,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in todos" v-bind:key="item.id">
+        <tr v-for="item in computedTodos" v-bind:key="item.id">
           <th>{{ item.id }}</th> <!-- td? -->
           <td>{{ item.comment }}</td>
           <td class="state">
