@@ -30,7 +30,7 @@
         <tr v-for="item in computedTodos"
           v-bind:key="item.id"
           v-bind:class="{done:item.state}">
-          <th>{{ item.id }}</th>
+          <td>{{ item.id }}</td>
           <td>{{ item.comment }}</td>
           <td class="state">
             <button v-on:click="doChangeState(item)">
