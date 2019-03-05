@@ -39,5 +39,13 @@ const app = new Vue({
 
 
     }
+  },
+  watch: {
+    todos: {
+      handler: function(todos) {
+        todoStorage.save(todos)
+      },
+      deep: true
+    }
   }
 })
