@@ -59,6 +59,13 @@ const app = new Vue({
       deep: true
     }
   },
+  computed: {
+    labels() {
+      return this.options.reduce(function(a, b) {
+        return Object.assign(a, { [b.value]: b.label })
+      }, {})
+    }
+  },
   created() {
     this.todos = todoStorage.fetch()
   }
