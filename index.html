@@ -12,7 +12,7 @@
         v-model="current"
         v-bind:value="label.value">{{ label.label }}
     </label>
-    
+
     <table>
       <thead>
         <tr>
@@ -26,8 +26,8 @@
         <tr v-for="item in todos" v-bind:key="item.id">
           <th>{{ item.id }}</th> <!-- td? -->
           <td>{{ item.comment }}</td>
-          <td class="state"">
-            <button v-on:click="doChangeState(item)"">
+          <td class="state">
+            <button v-on:click="doChangeState(item)">
               {{ item.state }}
             </button>
           </td>
