@@ -7,6 +7,8 @@
 </head>
 <body>
   <div id="app">
+    <h1>チュートリアルTODOテスト</h1>
+
     <label v-for="label in options">
       <input type="radio"
         v-model="current"
@@ -25,8 +27,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in computedTodos" v-bind:key="item.id">
-          <th>{{ item.id }}</th> <!-- td? -->
+        <tr v-for="item in computedTodos"
+          v-bind:key="item.id"
+          v-bind:class="{done:item.state}">
+          <th>{{ item.id }}</th>
           <td>{{ item.comment }}</td>
           <td class="state">
             <button v-on:click="doChangeState(item)">
