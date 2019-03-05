@@ -7,6 +7,7 @@
 </head>
 <body>
   <div id="app">
+    <!-- 絞り込みラジオボタン -->
     <table>
       <thead>
         <tr>
@@ -29,9 +30,12 @@
         </tr>
       </tbody>
     </table>
-    <!-- 絞り込みラジオボタン -->
-    <!-- ToDo テーブル -->
-    <!-- 新規登録フォーム -->
+
+    <h2>新しい作業の追加</h2>
+    <form class="add-form" v-on:submit.prevent="doAdd">
+      コメント <input type="text" ref="comment">
+      <button type="submit">追加</button>
+    </form>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
